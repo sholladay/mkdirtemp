@@ -14,6 +14,7 @@ test('mkdirtemp() basics', async (t) => {
     t.true(path.isAbsolute(dirPath));
 
     t.true(dirPath.startsWith(path.join(osTempDir, path.sep)));
+    t.is(dirPath.substring(0, dirPath.length - 6), osTempDir + path.sep);
     const lastSep = dirPath.lastIndexOf(path.sep);
     const rest = dirPath.substring(lastSep);
     t.is(rest.length, 7);
