@@ -21,7 +21,7 @@
     "email": "me@seth-holladay.com"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=4.8"
   },
   "license": "MPL-2.0",
   "files": [

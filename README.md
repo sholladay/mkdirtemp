@@ -35,7 +35,7 @@ mkdirtemp().then((dirPath) => {
 
 ### mkdirtemp(cwd)
 
-Returns a promise for the path of the new directory.
+Returns a `Promise` for the path of the new directory.
 
 #### cwd
 
