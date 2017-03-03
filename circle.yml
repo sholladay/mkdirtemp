@@ -1,3 +1,8 @@
 machine:
   node:
     version: 6
+
+test:
+  override:
+    - npm test
+    - nvm use v4 && npm test
