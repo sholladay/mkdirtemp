@@ -24,7 +24,8 @@ test('mkdirtemp() basics', async (t) => {
 test('filesystem properties', async (t) => {
     const date = Math.trunc(Date.now() / 1000);
     const dirPath = await mkdirtemp();
-    const perm = fs.constants;
+    const perm = (fs.constants || fs);
+    // node v4 does not have fs.constants
 
     await t.notThrows(new Promise((resolve, reject) => {
         // eslint-disable-next-line no-bitwise
